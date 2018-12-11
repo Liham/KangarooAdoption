@@ -25,7 +25,11 @@
   <body>
       <div class="navbar-wrapper">
         <div class="aboutPage">
-          <div>About Kangaroo Adoption</div>
+          <div>
+            <button onclick="aboutPage()"> 
+              About Kangaroo Adoption
+            </button>
+          </div>
         </div>
 
         <div class="listings">
@@ -35,68 +39,75 @@
       </div>
     </body>
     
-    <div class="image">
-      <img class="resize" src="https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/kangaroo-joey.ngsversion.1473419913889.jpg">
-      <h2>
-        <select>
-          <option>Select Your State</option>
-          <option value="alabama">Alabama</option>
-          <option value="alaska">Alaska</option>
-          <option value="arizona">Arizona</option>
-          <option value="arkansas">Arkansas</option>
-          <option value="california">California</option>
-          <option value="colorado">Colorado</option>
-          <option value="conneticut">Conneticut</option>
-          <option value="delaware">Delaware</option>
-          <option value="florida">Florida</option>
-          <option value="georgia">Georgia</option>
-          <option value="hawaii">Hawaii</option>
-          <option value="idaho">Idaho</option>
-          <option value="illinois">Illinois</option>
-          <option value="indiana">Indiana</option>
-          <option value="iowa">Iowa</option>
-          <option value="kansas">Kansas</option>
-          <option value="kentucky">Kentucky</option>
-          <option value="louisiana">Louisiana</option>
-          <option value="maine">Maine</option>
-          <option value="maryland">Maryland</option>
-          <option value="massachusetts">Massachusetts</option>
-          <option value="michigan">Michigan</option>
-          <option value="minnesota">Minnesota</option>
-          <option value="mississippi">Mississippi</option>
-          <option value="missouri">Missouri</option>
-          <option value="montana">Montana</option>
-          <option value="nebraska">Nebraska</option>
-          <option value="nevada">Nevada</option>
-          <option value="new_hampshire">New Hampshire</option>
-          <option value="new_jersey">New Jersey</option>
-          <option value="new_mexico">New Mexico</option>
-          <option value="new_york">New York</option>
-          <option value="north_carolina">North Carolina</option>
-          <option value="north_dakota">North Dakota</option>
-          <option value="ohio">Ohio</option>
-          <option value="oklahoma">Oklahoma</option>
-          <option value="oregon">Oregon</option>
-          <option value="pennsylvania">Pennsylvania</option>
-          <option value="rhode_island">Rhode Island</option>
-          <option value="south_carolina">South Carolina</option>
-          <option value="south_dakota">South Dakota</option>
-          <option value="tennessee">Tennessee</option>
-          <option value="texas">Texas</option>
-          <option value="utah">Utah</option>
-          <option value="vermont">Vermont</option>
-          <option value="virginia">Virginia</option>
-          <option value="washington">Washington</option>
-          <option value="west_virginia">West Virginia</option>
-          <option value="wisconsin">Wisconsin</option>
-          <option value="wyoming">Wyoming</option>
-        </select>
-      </h2>
-      <h3>
-        Please select your state to see if you can own a kangaroo
-      </h3>
-    </div>
+    <mainpage id="mainPage">
+      <div class="image">
+        <img class="resize" src="https://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/kangaroo-joey.ngsversion.1473419913889.jpg">
+        <h3>
+          Please select your state to see if you can own a kangaroo.
+        </h3>
+        <h2>
+          <select id="stateList" onchange="stateSelect()">
+            <option value="">Select Your State</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Alabama.">Alabama</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Alaska.">Alaska</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Arizona.">Arizona</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Arkansas.">Arkansas</option>
+            <option value="Sorry, it is illegal to own a kangaroo in California.">California</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Colorado.">Colorado</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Conneticut.">Conneticut</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Delaware.">Delaware</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Florida.">Florida</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Georgia.">Georgia</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Hawaii.">Hawaii</option>
+            <option value="Congratulations! You can own a kangaroo in Idaho, but you need a permit.">Idaho</option>
+            <option value="Congratulations! You can own a kangaroo in Illinois, but you need a permit.">Illinois</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Indiana.">Indiana</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Iowa.">Iowa</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Kansas.">Kansas</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Kentucky.">Kentucky</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Louisiana.">Louisiana</option>
+            <option value="Congratulations! You can own a kangaroo in Maine, but you need a permit.">Maine</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Maryland.">Maryland</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Massachusetts.">Massachusetts</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Michigan.">Michigan</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Minnesota.">Minnesota</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Mississippi.">Mississippi</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Missouri.">Missouri</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Montana.">Montana</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Nebraska.">Nebraska</option>
+            <option value="Congratulations! You can own a kangaroo in Nevada, but you need a permit.">Nevada</option>
+            <option value="Sorry, it is illegal to own a kangaroo in New Hampshire.">New Hampshire</option>
+            <option value="Congratulations! You can own a kangaroo in New Jersey, but you need a permit.">New Jersey</option>
+            <option value="Congratulations! You can own a kangaroo in New Mexico, but you need a permit.">New Mexico</option>
+            <option value="Sorry, it is illegal to own a kangaroo in New York.">New York</option>
+            <option value="Sorry, it is illegal to own a kangaroo in North Carolina.">North Carolina</option>
+            <option value="Sorry, it is illegal to own a kangaroo in North Dakota.">North Dakota</option>
+            <option value="Congratulations! You can own a kangaroo in Ohio, but you need a permit.">Ohio</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Oklahoma.">Oklahoma</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Oregon.">Oregon</option>
+            <option value="Congratulations! You can own a kangaroo in Pennsylvania, but you need a permit.">Pennsylvania</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Rhode Island.">Rhode Island</option>
+            <option value="Congratulations! You can own a kangaroo in South Carolina.">South Carolina</option>
+            <option value="Sorry, it is illegal to own a kangaroo in South Dakota.">South Dakota</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Tennessee.">Tennessee</option>
+            <option value="Congratulations! You can own a kangaroo in Texas, but you need a permit.">Texas</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Utah.">Utah</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Vermont.">Vermont</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Virginia.">Virginia</option>
+            <option value="Congratulations! You can own a kangaroo in Washington, but you need a permit.">Washington</option>
+            <option value="Congratulations! You can own a kangaroo in West Virginia.">West Virginia</option>
+            <option value="Congratulations! You can own a kangaroo in Wisconsin.">Wisconsin</option>
+            <option value="Sorry, it is illegal to own a kangaroo in Wyoming.">Wyoming</option>
+          </select>
+        </h2>
+        <ownership><input type="text" id="ownership" size="20"></ownership>
+      </div>
+    </mainpage>
     
+    <aboutpage id="aboutPage">
+      <img class="resize" src="https://i.redd.it/qmaznn7e83q11.png">
+    </aboutpage>
+         
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
