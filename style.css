@@ -99,3 +99,34 @@ h3 {
   width: 100%;
   color: #442200;
 }
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 12px;
+  color: red;
+}
+
+button {
+  font-size: 16px;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+ownership { 
+  position: absolute; 
+  top: 280px; 
+  left: 100px;
+  width: 100%;
+}
+
+aboutPage {
+  display: none;
+}
