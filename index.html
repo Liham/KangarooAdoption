@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Welcome to Glitch!</title>
@@ -17,14 +16,14 @@
   <body>
     <header>
       <div class="header">
-        <h1>
-          Adopt A Kangaroo
-        </h1>
+          <h1>
+            Adopt A Kangaroo
+          </h1>
       </div>
     </header>
   <body>
       <div class="navbar-wrapper">
-        <div class="aboutPage">
+        <div class="about">
           <div>
             <button onclick="aboutPage()"> 
               About Kangaroo Adoption
@@ -33,7 +32,11 @@
         </div>
 
         <div class="listings">
-         <div>Kangaroo Listings</div>
+         <div>
+           <button onclick="listingsPage(); randomListings(); kangarooRdmImg();">
+             Kangaroo Listings
+           </button>
+         </div>
         </div>
 
       </div>
@@ -105,8 +108,56 @@
     </mainpage>
     
     <aboutpage id="aboutPage">
-      <img class="resize" src="https://i.redd.it/qmaznn7e83q11.png">
+      <img class="resizeMap" src="https://i.redd.it/qmaznn7e83q11.png">
+      <p>
+        Don't feed kangaroos cow milk, they're lactose intolerant. Keep them away from dogs, as they are natural enemies. 
+      </p>
     </aboutpage>
+    
+    <listingspage id="listingsPage">
+      <ul class="listing-container">
+        <li class="kangarooListing">
+          <ul class="stats-container">
+            <li>
+              <img class="resizeKangaroo" id="picture" src="https://cdn.glitch.com/2216f874-ba54-4092-8b6e-3908c00935c8%2Fkangaroo4.jpg?1547655312430">
+            </li>
+            <li class="stats-item">
+              Name: <span id="name"></span>
+            </li>
+            <li class="stats-item">
+              Age: <span id="age"></span> years old
+            </li>
+            <li class="stats-item">
+              Height: <span id="heightFeet"></span> ft. <span id="heightInch"></span> in.
+            </li>
+            <li class="stats-item">
+              Weight: <span id="weightLbs"></span> lbs.
+            </li>
+          </ul>
+        </li>
+        <li class="kangarooListing">
+          <img class="resizeKangaroo" src="https://cdn.glitch.com/2216f874-ba54-4092-8b6e-3908c00935c8%2Fkangaroo1.jpg?1547655328379">
+        </li>
+        <li class="kangarooListing">
+          <img class="resizeKangaroo" src="https://cdn.glitch.com/2216f874-ba54-4092-8b6e-3908c00935c8%2Fkangaroo2.jpg?1547655330647">
+        </li>
+        <li class="kangarooListing">
+          <img class="resizeKangaroo" src="https://cdn.glitch.com/2216f874-ba54-4092-8b6e-3908c00935c8%2Fkangaroo3.jpg?1547658723525">
+        </li>
+        <li class="kangarooListing">
+          <img class="resizeKangaroo" src="https://cdn.glitch.com/2216f874-ba54-4092-8b6e-3908c00935c8%2Fkangaroo4.jpg?1547655312430">
+        </li>
+        <li class="kangarooListing">
+          <img class="resizeKangaroo" src="https://cdn.glitch.com/2216f874-ba54-4092-8b6e-3908c00935c8%2Fkangaroo5.jpg?1547655320458">
+        </li>
+        <li class="kangarooListing">
+          7
+        </li>
+        <li class="kangarooListing">
+          8
+        </li>
+      </ul>    
+    </listingspage>
          
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
